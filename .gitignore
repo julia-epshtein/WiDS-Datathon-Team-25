@@ -28,10 +28,10 @@ env/
 package-lock.json
 yarn.lock
 
-# /data/raw/
-# *.csv
-# *.tsv
-# *.xlsx
+/data
+*.csv
+*.tsv
+*.xlsx
 
 *.ipynb_checkpoints
 .tox/

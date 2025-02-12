@@ -74,4 +74,25 @@ WiDS-Datathon-2025/
    deactivate
    ```
 
----
+## Getting the Data
+
+Follow these steps to set up the dataset for the project:
+
+1. **Create a data directory**  
+   - In your project folder, create a new directory named `data`.
+
+2. **Set up subdirectories**  
+   - Inside the `data` directory, create two subdirectories:  
+     - `raw` (for storing the original downloaded data)  
+     - `preprocessed` (for storing the processed data)
+
+3. **Download the dataset**  
+   - Go to the competition page: [WiDS Datathon 2025 Data](https://www.kaggle.com/competitions/widsdatathon2025/data)  
+   - Download all necessary files.
+
+4. **Move the data**  
+   - Place all downloaded files into the `data/raw` directory.
+
+5. **Run preprocessing**  
+   - Open and run `je_preprocessing.ipynb`.  
+   - After running all cells, the preprocessed data will be saved in `data/preprocessed`.
