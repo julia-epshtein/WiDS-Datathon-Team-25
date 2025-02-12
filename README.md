@@ -8,7 +8,6 @@ Building a model to predict both an individual's SEX and ADHD diagnosis.
 WiDS-Datathon-2025/
 ├── Makefile               <- The Makefile with convenience commands like `make data` or `make train`
 ├── README.md              <- The top-level README for developers using this project.
-├── .env                   <- Environment configuration file (you may want to put secrets here)
 ├── .gitignore             <- The .gitignore file to exclude unwanted files/folders from version control
 ├── pyproject.toml         <- Configuration file for Python projects
 ├── requirements.txt       <- The requirements file for reproducing the analysis environment
@@ -16,20 +15,31 @@ WiDS-Datathon-2025/
 │
 ├── data/
 │   ├── raw/               <- Original data files
-│   ├── processed/         <- Processed data
-│   │   ├── regular/       <- Regular preprocessed data
-│   │   │   ├── X_train.csv
-│   │   │   ├── X_test.csv
-│   │   │   ├── y_train.csv
-│   │   ├── normalized/    <- Normalized data
-│   │   │   ├── X_train.csv
-│   │   │   ├── X_test.csv
-│   │   ├── pca/           <- PCA transformed data
-│   │   │   ├── X_train.csv
-│   │   │   ├── X_test.csv
-│   │   ├── pca_normalized/ <- PCA + Normalized data
-│   │   │   ├── X_train.csv
-│   │   │   ├── X_test.csv
+│   │   │   ├── widsdatathon2025 <- Folder containing the raw dataset
+│   │   │   │   ├── TEST    <- TEST dataset files
+│   │   │   │   │   ├── TEST_CATEGORICAL.xlsx
+│   │   │   │   │   ├── TEST_FUNCTIONAL_CONNECTOME_MATRICES.csv
+│   │   │   │   │   ├── TEST_QUANTITATIVE_METADATA.xlsx
+│   │   │   │   ├── TRAIN   <- TRAIN dataset files
+│   │   │   │   │   ├── TRAIN_CATEGORICAL_METADATA.xlsx
+│   │   │   │   │   ├── TRAIN_FUNCTIONAL_CONNECTOME_MATRICES.csv
+│   │   │   │   │   ├── TRAIN_QUANTITATIVE_METADATA.xlsx
+│   │   │   │   │   ├── TRAINING_SOLUTIONS.xlsx
+│   │   │   │   ├── Data Dictionary.xlsx
+│   │   │   │   ├── SAMPLE_SUBMISSION.xlsx
+│   ├── preprocessed/       <- Processed data files
+│   │   │   ├── test_data.csv
+│   │   │   ├── train_data.csv
+│   │   │   ├── train_data_scaled.csv
+│   │   │   ├── train_data_pca.csv
+│
+├── notebooks/
+│   ├── preprocessing/      <- Jupyter notebooks for preprocessing tasks
+│   │   │   ├── je_preprocessing.ipynb
+│   ├── visualizations/     <- Jupyter notebooks for creating visualizations
+│   │   │   ├── je_pie_charts.ipynb
+│
+├── venv/                   <- Virtual environment for package management
 ```
 
 ## Setting Up the Virtual Environment
