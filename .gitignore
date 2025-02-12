@@ -1,0 +1,45 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+Desktop.ini
+
+# Ignore Python bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore virtual environment directories (Python)
+venv/
+env/
+
+# Ignore IDE/editor-specific files
+.idea/
+.vscode/
+
+# Ignore log files
+*.log
+
+# Ignore sensitive files
+.env
+
+# Ignore package manager lock files 
+package-lock.json
+yarn.lock
+
+/data
+*.csv
+*.tsv
+*.xlsx
+
+*.ipynb_checkpoints
+.tox/
+.coverage
+.pytest_cache/
+
+*.log
+*.bak
+docker-compose.override.yml
+
+../
