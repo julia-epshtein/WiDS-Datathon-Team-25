@@ -106,3 +106,11 @@ Follow these steps to set up the dataset for the project:
 5. **Run preprocessing**  
    - Open and run `je_preprocessing.ipynb`.  
    - After running all cells, the preprocessed data will be saved in `data/preprocessed`.
+
+# Additional Dependencies
+Before installing Python dependencies, install `libomp` (required for XGBoost) using:
+
+```bash
+brew install libomp
+brew link libomp
+```
