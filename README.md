@@ -2,6 +2,9 @@
 
 Building a model to predict both an individual's SEX and ADHD diagnosis.
 
+- **Google Drive Folder**: Access additional resources, datasets, and presentations here: [WiDS-Datathon-Team-25 Google Drive](https://drive.google.com/drive/folders/1W7KNNP1_fpOVefiQH_p3e22zfxKHuViE?usp=share_link).
+- **Notion Project Page**: Explore the project roadmap, task breakdowns, and collaboration notes here: [WiDS-Datathon-Team-25 Notion Page](https://www.notion.so/18666b317378800b812fc289bab2f8f5?v=18666b317378805b97d5000c513e1ec0&pvs=4).
+
 ## Project Organization
 
 ```
