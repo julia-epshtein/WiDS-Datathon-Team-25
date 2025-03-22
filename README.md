@@ -207,19 +207,19 @@ This project is designated for a wide variety of audiences, primarily data scien
 
 ## **📄 References & Additional Resources**
 
-## 1. Building an image classification model with Tensorflow vs. Pytorch:
+# 1. Building an image classification model with Tensorflow vs. Pytorch:
 
 https://www.youtube.com/watch?v=ay1E1f8VqP8&list=WL&index=1&t=372s
 
-### Notebook From The Video:
+# Notebook From The Video:
 
 https://colab.research.google.com/drive/1UhZMd2u-hQjI-YmIojmZtEDA_jI-VWgo?usp=sharing
 
-## 2. **Statistical Approaches on Vectorized Connectomes for Brain-Behavior Mapping**
+# 2. **Statistical Approaches on Vectorized Connectomes for Brain-Behavior Mapping**
 
 https://www.youtube.com/watch?v=jbIsfVxuMWM&list=PLHAk3jHXWpxIqDNkF5olNdgCtYCecedsy&index=10
 
-## **3. Graph Neural Networks to Process Brain Connectomes**
+# 3. Graph Neural Networks to Process Brain Connectomes**
 
 https://www.youtube.com/watch?v=OkE3776GfWU&list=PLHAk3jHXWpxIqDNkF5olNdgCtYCecedsy&index=7 
 
