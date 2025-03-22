@@ -9,7 +9,7 @@ Building a model to predict both an individual's SEX and ADHD diagnosis.
 
 | Name | GitHub Handle | Contribution |
 | ----- | ----- | ----- |
-| Shachi Benara | @benaras | Led feature engineering efforts and implemented scatterplot, contributing to model development and data preprocessing. W|
+| Shachi Benara | @benaras | Led feature engineering efforts and implemented scatterplot, contributing to model development and data preprocessing. |
 | Julia Epshtein | @julia-epshtein | Optimized XGBoost and created PCA-normalized dataframes to enhance model performance. |
 | Mantra Burugu | @mantraburugu | Applied SMOTE for balancing ADHD and gender data, investigated FCM visualization, and documented code for clarity. |
 | Lindsey Blau | @lindseyblau | Conducted feature selection by dropping low p-value columns, optimized XGB, and researched statistical feature relationships. |
