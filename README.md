@@ -4,30 +4,25 @@
 
 | Name | GitHub Handle | Contribution |
 | ----- | ----- | ----- |
-| Shachi Benara | @benaras | 00 |
-| Julia Epshtein | @julia-epshtein | 00 |
-| Mantra Burugu | @mantraburugu | 00 |
-| Lindsey Blau | @lindseyblau | 00 |
+| Shachi Benara | @benaras | Led feature engineering efforts and implemented logistic regression, contributing to model development and data preprocessing. |
+| Julia Epshtein | @julia-epshtein | Optimized XGBoost and created PCA-normalized dataframes to enhance model performance. |
+| Mantra Burugu | @mantraburugu | Applied SMOTE for balancing ADHD and gender data, investigated FCM visualization, and documented code for clarity. |
+| Lindsey Blau | @lindseyblau | Conducted feature selection by dropping low p-value columns, optimized XGB, and researched statistical feature relationships. |
 
 ---
 
 ## **🎯 Project Highlights**
 
-**Example:**
-
-* Built a \[insert model type\] using \[techniques used\] to solve \[Kaggle competition task\]
-* Achieved an F1 score of \[insert score\] and a ranking of \[insert ranking out of participating teams\] on the final Kaggle Leaderboard
-* Used \[explainability tool\] to interpret model decisions
-* Implemented \[data preprocessing method\] to optimize results within compute constraints
+* Built a machine learning model to predict both an individual's SEX and ADHD diagnosis.  
+* Developed an **XGBoost and Logistic Regression model** using **feature engineering, SMOTE for balancing, and PCA for dimensionality reduction** to solve the **WiDS Datathon 2025 Kaggle competition task**.  
+* Achieved an **F1 score of 0.75447** and a ranking of **111/543** on the final Kaggle Leaderboard.  
+* Implemented **data normalization, feature selection, and balancing techniques** to optimize results within compute constraints.  
 
 🔗 [WiDS Datathon 2025 | Kaggle Competition Page](https://www.kaggle.com/competitions/widsdatathon2025/overview)
 
 ---
 
 ## **👩🏽‍💻 Setup & Execution**
-
-Building a model to predict both an individual's SEX and ADHD diagnosis.
-
 ## Project Organization
 
 ```
