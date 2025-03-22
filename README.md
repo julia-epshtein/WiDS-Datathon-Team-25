@@ -1,5 +1,31 @@
 # WiDS-Datathon-Team-25
 
+### **👥 Team Members**
+
+| Name | GitHub Handle | Contribution |
+| ----- | ----- | ----- |
+| Shachi Benara | @benaras | 00 |
+| Julia Epshtein | @julia-epshtein | 00 |
+| Mantra Burugu | @mantraburugu | 00 |
+| Lindsey Blau | @lindseyblau | 00 |
+
+---
+
+## **🎯 Project Highlights**
+
+**Example:**
+
+* Built a \[insert model type\] using \[techniques used\] to solve \[Kaggle competition task\]
+* Achieved an F1 score of \[insert score\] and a ranking of \[insert ranking out of participating teams\] on the final Kaggle Leaderboard
+* Used \[explainability tool\] to interpret model decisions
+* Implemented \[data preprocessing method\] to optimize results within compute constraints
+
+🔗 [WiDS Datathon 2025 | Kaggle Competition Page](https://www.kaggle.com/competitions/widsdatathon2025/overview)
+
+---
+
+## **👩🏽‍💻 Setup & Execution**
+
 Building a model to predict both an individual's SEX and ADHD diagnosis.
 
 ## Project Organization
