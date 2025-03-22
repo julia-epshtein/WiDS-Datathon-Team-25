@@ -9,7 +9,7 @@ Building a model to predict both an individual's SEX and ADHD diagnosis.
 
 | Name | GitHub Handle | Contribution |
 | ----- | ----- | ----- |
-| Shachi Benara | @benaras | Led feature engineering efforts and implemented logistic regression, contributing to model development and data preprocessing. |
+| Shachi Benara | @benaras | Led feature engineering efforts and implemented scatterplot, contributing to model development and data preprocessing. W|
 | Julia Epshtein | @julia-epshtein | Optimized XGBoost and created PCA-normalized dataframes to enhance model performance. |
 | Mantra Burugu | @mantraburugu | Applied SMOTE for balancing ADHD and gender data, investigated FCM visualization, and documented code for clarity. |
 | Lindsey Blau | @lindseyblau | Conducted feature selection by dropping low p-value columns, optimized XGB, and researched statistical feature relationships. |
@@ -157,69 +157,177 @@ This project is designated for a wide variety of audiences, primarily data scien
 
 ---
 
-## **📊 Data Exploration**
+## 📊 Data Exploration
 
-**Describe:**
+### Dataset Components
+The WiDS Datathon 2025 dataset consists of three main file types for both training (1200+ subjects) and test (300+ subjects) sets:
 
-* The dataset(s) used (i.e., the data provided in Kaggle \+ any additional sources)
-* Data exploration and preprocessing approaches
-* Challenges and assumptions when working with the dataset(s)
+1. **Categorical Metadata**:
+  - Demographics: sex, age (5-22 years), race, ethnicity
+  - MRI information: scan location, participant age during scan
+  - Social status: Barratt Simplified Measure of Social Status
+  - Parent education and occupation information
 
-**Potential visualizations to include:**
+2. **Functional MRI Connectome Matrices (fMRI)**:
+  - Square symmetrical matrices (100×100) representing brain connectivity
+  - Each cell indicates correlation between paired brain regions
+  - Positive correlations show regions active together
+  - Negative correlations show inversely active regions
 
-* Plots, charts, heatmaps, feature visualizations, sample dataset images
+3. **Quantitative Metadata**:
+  - Parenting questionnaires: Alabama Parenting Questionnaire
+  - Emotional assessments: Strengths and Difficulties Questionnaire
+  - Behavioral measures: problems, hyperactivity, prosocial behavior
+
+### Key Insights from EDA
+Our exploratory analysis revealed several patterns:
+
+- ADHD is most common among White/Caucasian participants in the dataset
+- Males are overrepresented (70/30 split), with increasing male enrollment from 2015-2019
+- Higher ADHD prevalence correlates with:
+ - Increased behavioral difficulties scores
+ - Higher emotional problem scores
+ - Lower prosocial behavior scores
+- Sex differences appear in:
+ - Color vision scores (males showing more scattered outliers)
+ - Conduct problems (males showing higher median scores)
+ - Prosocial behavior (females showing higher scores)
+
+### Preprocessing Challenges
+- Extremely high dimensionality (~20,000 columns) requiring complex dimension reduction
+- Handling the complex fMRI connectome matrices required specialized approaches
+- Class imbalance between males and females required careful model evaluation
+- Missing values in questionnaire responses needed appropriate imputation strategies
+
+(ADD image here) --> ![Data Visualization showing ADHD distribution and feature correlations](https://i.imgur.com/placeholder_image1.jpg)
 
 ---
 
-## **🧠 Model Development**
+## 🧠 Model Development
 
-* Model(s) used (e.g., CNN with transfer learning, regression models)
-* Feature selection and Hyperparameter tuning strategies
-* Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
+### Model Architecture
+We implemented several model approaches:
+- **Primary Model**: XGBoost classifier for both ADHD and sex prediction
+- **Preprocessing Pipeline**: Multiple preprocessing strategies tested including:
+ - StandardScaler and MinMaxScaler for feature normalization
+ - PCA for dimensionality reduction (found 1,007 components needed for 90% variance)
+ - Custom feature engineering based on domain knowledge
+
+### Feature Engineering
+We created several engineered features:
+- Professional status indicators from parent occupation
+- Similarity measures between parent occupations
+- Minority status indicators
+- ADHD risk scores based on behavioral measures
+- Interaction terms between parent education and occupation
+- Clustered questionnaire features to capture latent patterns
+
+### Training Approach
+- 80/20 train/validation split for model development
+- Balanced accuracy and F1-score used as primary evaluation metrics
+- Baseline model established using logistic regression with minimal preprocessing
+- Grid search attempted for hyperparameter optimization (limited by computational resources)
+- Left Join + MinMax Scaler + XGBoost + PCA showed the best performance
+
+(ADD image here) --> ![Model architecture and performance comparison](https://i.imgur.com/placeholder_image2.jpg)
 
 ---
 
-## **📈 Results & Key Findings**
+## 📈 Results & Key Findings
 
-* F1-score: 0.75447
-* Kaggle Leaderboard Rank: 111/543
-* Model performance insights, fairness evaluation.
+### Performance Metrics
+- **F1-score**: 0.75447
+- **Kaggle Leaderboard Rank**: 111/543
+- **ADHD Classification**: Higher accuracy than sex prediction
 
-**Potential visualizations to include:**
+### Key Performance Insights
+- Our model showed stronger predictive ability for ADHD than for sex classification
+- Behavioral and emotional measures were more predictive than demographic features
+- Feature importance analysis revealed that hyperactivity scores, conduct problems, and externalizing behavior were top predictors for ADHD
+- Connectome data showed promising patterns but required complex processing to extract meaningful features
 
+### Model Limitations
+- Performance discrepancy between ADHD and sex prediction tasks
+- Computational constraints limited full optimization potential
+- Challenges interpreting the neurobiological significance of identified patterns
+
+(ADD image here) --> ![Performance visualization and confusion matrix](https://i.imgur.com/placeholder_image3.jpg)
 
 ---
 
-## **🖼️ Impact Narrative**
+## 🖼️ Impact Narrative
 
-1. What brain activity patterns are associated with ADHD; are they different between males and females, and, if so, how?
-2. How could your work help contribute to ADHD research and/or clinical care?
+### Brain Activity Patterns Associated with ADHD
+Our analysis suggests that ADHD manifests in distinct brain connectivity patterns:
+
+1. **Connectivity Differences**: 
+  - ADHD subjects show altered connectivity in regions associated with attention regulation and impulse control
+  - These patterns appear to differ between males and females, with males showing more pronounced connectivity alterations
+
+2. **Sex-Based Differences**:
+  - Males with ADHD demonstrate stronger hyperactivity indicators in both behavior measures and neural connectivity
+  - Females with ADHD show more subtle patterns, potentially explaining underdiagnosis in female populations
+  - The connectivity differences align with behavioral observations showing males with higher externalizing behaviors
+
+3. **Demographic Interactions**:
+  - Social and environmental factors (captured in parenting and social status measures) appear to interact with connectivity patterns
+  - These interactions differ between sexes, suggesting different environmental vulnerability patterns
+
+### Contribution to ADHD Research and Clinical Care
+Our work contributes to ADHD research and clinical care by:
+
+1. **Biomarker Development**:
+  - Identifying potential neural biomarkers that could aid diagnosis
+  - Highlighting sex-specific patterns that may improve diagnosis in underrepresented groups
+
+2. **Clinical Applications**:
+  - Suggesting objective measures that could supplement current diagnostic approaches
+  - Providing quantitative connectivity patterns that could be monitored during treatment
+
+3. **Research Directions**:
+  - Creating a foundation for more detailed studies of sex-specific ADHD manifestations
+  - Demonstrating the value of combining behavioral, demographic, and neuroimaging data
+
+(ADD image here) --> ![Brain connectivity patterns associated with ADHD](https://i.imgur.com/placeholder_image4.jpg)
 
 ---
-
 ## **🚀 Next Steps & Future Improvements**
 
-* What are some of the limitations of your model?
-* What would you do differently with more time/resources?
-* What additional datasets or techniques would you explore?
+**Current Model Limitations**
+- Our XGBoost model struggles with sex classification despite reasonable ADHD prediction accuracy
+- Feature dimensionality challenges with nearly 20,000 columns requiring 1,007 principal components to capture 90% variance
+- Limited ability to effectively process and extract meaningful patterns from complex fMRI connectome matrices
+- Computational constraints when attempting full hyperparameter optimization with GridSearch
+
+**With More Time/Resources We Would**
+- Implement Graph Neural Networks specifically designed for brain connectivity data
+- Compare PCA with UMAP for more effective non-linear dimensionality reduction
+- Optimize classification thresholds through extensive cross-validation
+- Apply deep learning approaches that can better capture the spatial relationships in brain connectivity
+- Explore ensemble methods combining predictions from multiple model architectures
+
+**Additional Datasets & Techniques**
+- Incorporate longitudinal data to track ADHD manifestation changes over time
+- Explore additional neuroimaging modalities beyond functional connectivity (structural MRI, DTI)
+- Apply graph-theoretical measures to quantify brain network properties
+- Investigate transfer learning from other neuroimaging studies
+- Implement automated machine learning (AutoML) for more efficient hyperparameter tuning
 
 ---
 
 ## **📄 References & Additional Resources**
 
-# 1. Building an image classification model with Tensorflow vs. Pytorch:
+**1. Building an image classification model with Tensorflow vs. Pytorch:**
 
 https://www.youtube.com/watch?v=ay1E1f8VqP8&list=WL&index=1&t=372s
 
-# Notebook From The Video:
+Notebook From The Video: https://colab.research.google.com/drive/1UhZMd2u-hQjI-YmIojmZtEDA_jI-VWgo?usp=sharing
 
-https://colab.research.google.com/drive/1UhZMd2u-hQjI-YmIojmZtEDA_jI-VWgo?usp=sharing
-
-# 2. **Statistical Approaches on Vectorized Connectomes for Brain-Behavior Mapping**
+**2. Statistical Approaches on Vectorized Connectomes for Brain-Behavior Mapping**
 
 https://www.youtube.com/watch?v=jbIsfVxuMWM&list=PLHAk3jHXWpxIqDNkF5olNdgCtYCecedsy&index=10
 
-# 3. Graph Neural Networks to Process Brain Connectomes**
+**3. Graph Neural Networks to Process Brain Connectomes**
 
 https://www.youtube.com/watch?v=OkE3776GfWU&list=PLHAk3jHXWpxIqDNkF5olNdgCtYCecedsy&index=7 
 
