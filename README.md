@@ -139,3 +139,88 @@ Before installing Python dependencies, install `libomp` (required for XGBoost) u
 brew install libomp
 brew link libomp
 ```
+
+## **🏗️ Project Overview**
+
+**Describe:**
+
+Our Team, MIT Team 25, has been working on the Women in Data Science (WiDS)  2025 Datathon. The datathon is an international data science competition aimed at increasing participation and skill development among women in data science. This year’s challenge and project focuses on building a predictive model that can determine both an individual’s SEX and ADHD diagnosis based on provided data. This project aims to shed light on the gaps in ADHD diagnosis for genders. 
+
+ADHD is a widely studied neurodevelopmental disorder, yet its diagnosis remains challenging, especially in females. Historically, ADHD research and diagnostic criteria have been largely based on male-centric studies and data, leading to incorrect and under diagnostics in women and girls. Symptoms in females often present differently, manifesting as inattentiveness, causing many cases to go undetected and undiagnosed. 
+
+This project aims to:
+* Develop a machine learning capable of accurately predicting an individual sex and ADHD diagnosis based on available features. 
+* Investigate and analyze the relationships between various demographic, behavioral, and medical factors to gain insights into ADHD diagnosis patterns. 
+* Develop insight into the ADHD diagnosis gender gap.
+
+This project is designated for a wide variety of audiences, primarily data scientists, machine learning engineers, students, and participants in the WiDS datathon. Additionally, this project is intended for all participants of the Break Through Tech program, who are hosting us in this datathon. 
+
+---
+
+## **📊 Data Exploration**
+
+**Describe:**
+
+* The dataset(s) used (i.e., the data provided in Kaggle \+ any additional sources)
+* Data exploration and preprocessing approaches
+* Challenges and assumptions when working with the dataset(s)
+
+**Potential visualizations to include:**
+
+* Plots, charts, heatmaps, feature visualizations, sample dataset images
+
+---
+
+## **🧠 Model Development**
+
+* Model(s) used (e.g., CNN with transfer learning, regression models)
+* Feature selection and Hyperparameter tuning strategies
+* Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
+
+---
+
+## **📈 Results & Key Findings**
+
+* F1-score: 0.75447
+* Kaggle Leaderboard Rank: 111/543
+* Model performance insights, fairness evaluation.
+
+**Potential visualizations to include:**
+
+
+---
+
+## **🖼️ Impact Narrative**
+
+1. What brain activity patterns are associated with ADHD; are they different between males and females, and, if so, how?
+2. How could your work help contribute to ADHD research and/or clinical care?
+
+---
+
+## **🚀 Next Steps & Future Improvements**
+
+* What are some of the limitations of your model?
+* What would you do differently with more time/resources?
+* What additional datasets or techniques would you explore?
+
+---
+
+## **📄 References & Additional Resources**
+
+## 1. Building an image classification model with Tensorflow vs. Pytorch:
+
+https://www.youtube.com/watch?v=ay1E1f8VqP8&list=WL&index=1&t=372s
+
+### Notebook From The Video:
+
+https://colab.research.google.com/drive/1UhZMd2u-hQjI-YmIojmZtEDA_jI-VWgo?usp=sharing
+
+## 2. **Statistical Approaches on Vectorized Connectomes for Brain-Behavior Mapping**
+
+https://www.youtube.com/watch?v=jbIsfVxuMWM&list=PLHAk3jHXWpxIqDNkF5olNdgCtYCecedsy&index=10
+
+## **3. Graph Neural Networks to Process Brain Connectomes**
+
+https://www.youtube.com/watch?v=OkE3776GfWU&list=PLHAk3jHXWpxIqDNkF5olNdgCtYCecedsy&index=7 
+
+---
