@@ -5,6 +5,28 @@ Building a model to predict both an individual's SEX and ADHD diagnosis.
 - **Google Drive Folder**: Access additional resources, datasets, and presentations here: [WiDS-Datathon-Team-25 Google Drive](https://drive.google.com/drive/folders/1W7KNNP1_fpOVefiQH_p3e22zfxKHuViE?usp=share_link).
 - **Notion Project Page**: Explore the project roadmap, task breakdowns, and collaboration notes here: [WiDS-Datathon-Team-25 Notion Page](https://www.notion.so/18666b317378800b812fc289bab2f8f5?v=18666b317378805b97d5000c513e1ec0&pvs=4).
 
+### **👥 Team Members**
+
+| Name | GitHub Handle | Contribution |
+| ----- | ----- | ----- |
+| Shachi Benara | @benaras | Led feature engineering efforts and implemented logistic regression, contributing to model development and data preprocessing. |
+| Julia Epshtein | @julia-epshtein | Optimized XGBoost and created PCA-normalized dataframes to enhance model performance. |
+| Mantra Burugu | @mantraburugu | Applied SMOTE for balancing ADHD and gender data, investigated FCM visualization, and documented code for clarity. |
+| Lindsey Blau | @lindseyblau | Conducted feature selection by dropping low p-value columns, optimized XGB, and researched statistical feature relationships. |
+
+---
+
+## **🎯 Project Highlights**
+
+* Built a machine learning model to predict both an individual's SEX and ADHD diagnosis.  
+* Developed an **XGBoost and Logistic Regression model** using **feature engineering, SMOTE for balancing, and PCA for dimensionality reduction** to solve the **WiDS Datathon 2025 Kaggle competition task**.  
+* Achieved an **F1 score of 0.75447** and a ranking of **111/543** on the final Kaggle Leaderboard.  
+* Implemented **data normalization, feature selection, and balancing techniques** to optimize results within compute constraints.  
+
+🔗 [WiDS Datathon 2025 | Kaggle Competition Page](https://www.kaggle.com/competitions/widsdatathon2025/overview)
+
+---
+
 ## Project Organization
 
 ```
