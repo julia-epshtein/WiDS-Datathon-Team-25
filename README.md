@@ -142,8 +142,6 @@ brew link libomp
 
 ## **🏗️ Project Overview**
 
-**Describe:**
-
 Our Team, MIT Team 25, has been working on the Women in Data Science (WiDS)  2025 Datathon. The datathon is an international data science competition aimed at increasing participation and skill development among women in data science. This year’s challenge and project focuses on building a predictive model that can determine both an individual’s SEX and ADHD diagnosis based on provided data. This project aims to shed light on the gaps in ADHD diagnosis for genders. 
 
 ADHD is a widely studied neurodevelopmental disorder, yet its diagnosis remains challenging, especially in females. Historically, ADHD research and diagnostic criteria have been largely based on male-centric studies and data, leading to incorrect and under diagnostics in women and girls. Symptoms in females often present differently, manifesting as inattentiveness, causing many cases to go undetected and undiagnosed. 
