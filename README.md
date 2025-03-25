@@ -197,8 +197,10 @@ Our exploratory analysis revealed several patterns:
 - Class imbalance between males and females required careful model evaluation
 - Missing values in questionnaire responses needed appropriate imputation strategies
 
-![Data Visualization showing ADHD distribution and feature correlations](https://github.com/user-attachments/assets/d14b43a2-d5a9-4491-add7-4e806fe9fe05)
-
+![Data Visualization showing ADHD distribution and feature correlations](https://github.com/user-attachments/assets/d14b43a2-d5a9-4491-add7-4e806fe9fe05)  
+*Figure 1: Data Visualization showing ADHD distribution against categorical features*
+![da30cda9-1ea4-4a14-a43e-ee070d37a8a4](https://github.com/user-attachments/assets/b4748c35-78e5-48dc-84f3-8db458681202)
+*Figure 2: Data Visualization showing ADHD distribution against numerical features*
 
 ---
 
