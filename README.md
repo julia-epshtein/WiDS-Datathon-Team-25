@@ -167,11 +167,22 @@ The WiDS Datathon 2025 dataset consists of three main file types for both traini
   - Parent education and occupation information
 
 2. **Functional MRI Connectome Matrices (fMRI)**:
-  - Square symmetrical matrices (100×100) representing brain connectivity
+  - **What are fMRIs?**
+      - Resting-state functional magnetic resonance imaging
+      - Measures brain activity using **Blood Oxygen Level-Dependent** (BOLD) contrast
+        - Active brain regions consume more oxygen —> blood flow increases to those regions —> fMRI detects changes in blood oxygen levels to infer neural activities
+      - **What is Functional Connectivity?**
+         - Describes interactions between different brain regions
+         - Originally represented as a **Matrix** where rows and columns represent brain regions and the cells the **correlation** between activity in paired regions
+         - The matrix was **transformed into a dataset** w/ each column representing the interaction b/w two brain regions (ex. Region 0 ↔ Region 1)
+  - Functional MRI Connectome Matrices are square symmetrical matrices (100×100) that use the information from fMRIs to represent the correlation in brain connectivity
   - Each cell indicates correlation between paired brain regions
-  - Positive correlations show regions active together
-  - Negative correlations show inversely active regions
-
+  - Always square + symmetric and reflects connectivity among brain regions
+  - Correlations are computed using **Pearson correlation** of time series data from predefined regions of interest (ROIs)
+    - **Positive correlation:** brain regions are more active together
+    - **Negative correlation:** brain regions are less active together
+    - **Near-zero correlation:** Little to no relationship
+  - Size depends on number of regions in chosen anatomical atlas (100-region atlas → 100x100 matrix)
 3. **Quantitative Metadata**:
   - Parenting questionnaires: Alabama Parenting Questionnaire
   - Emotional assessments: Strengths and Difficulties Questionnaire
